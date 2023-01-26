@@ -1,0 +1,56 @@
+body{
+    background: linear-gradient( rgb(255, 170, 0) 5%, white 50%);
+}
+.cardrow {
+    padding: 20px 0px 5px 0px;
+    gap: 10px;
+}
+.card {
+   color:   rgb(255, 255, 255);
+   background: none !important;
+   margin: 30px 0px;
+   border: 1px solid  rgb(255, 170, 0) !important;
+   box-shadow: 3px 3px 8px rgb(255, 170, 0);
+}
+.rowmain{
+    padding: 30px 0px;
+    
+    /* justify-content: space-between; */
+}
+
+.colbig{
+    padding: 0px !important;
+    justify-content: start;
+}
+
+.colsmall{
+    /* justify-content: flex-end; */
+
+}
+.bigCard{
+    color: rgb(255, 255, 255);
+    
+    padding: 20px;
+    height: 400px;
+    border: 1px solid rgb(255, 170, 0) !important;
+    border-radius: 10px !important;
+    text-align: end;
+    background: url(/images/cine-clasico.jpeg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 3px 3px 8px rgb(255, 170, 0);
+}
+.bigCard h1{
+    text-shadow: 1px 1px black;
+}
+.smallCard{
+    
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    height: 400px;
+    width: 95%;
+    border: 1px solid rgb(255, 170, 0) !important;
+    box-shadow: 3px 3px 8px rgb(255, 170, 0);
+    border-radius: 10px !important;
+    margin-left: 27px;
+}

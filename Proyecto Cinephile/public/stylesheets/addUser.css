@@ -1,0 +1,32 @@
+body{
+    background: linear-gradient( rgb(255, 170, 0) 5%, white 50%);
+}
+.cardrow {
+    padding: 20px 0px 5px 0px;
+    gap: 10px;
+    
+}
+
+.formcol{
+    display: flex;
+    justify-content: center;
+}
+form{
+    margin: auto;
+
+}
+.divform{
+    width: 600px;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border: 1px solid rgb(255, 170, 0) !important;
+    border-radius: 10px !important;
+    box-shadow: 3px 3px 8px rgb(255, 170, 0);
+    margin-bottom: 30px;
+}
+input{
+    width: 400px;
+}
+label{
+    font-weight: 600;
+}
