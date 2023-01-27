@@ -16,7 +16,7 @@ let uploadImage = (carpeta) => {
     },
   });
 
-  const upload = multer({ storage: storage }).single("//a la espera de name");
+  const upload = multer({ storage: storage }).single("user_img");
   return upload;
 };
 module.exports = uploadImage;

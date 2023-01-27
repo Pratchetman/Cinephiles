@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="/stylesheets/oneUser.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <%- include('navbar') %>
+    <div class="container">
+      <div class="row cardrow">
+        <div class="col-12"><h1><%= resultUser[0].user_name %></h1></div>
+
+        <div class="card col-4">
+          <h4><%= resultUser[0].user_name %></h4>
+          <h6><%= resultUser[0].user_last_name %></h6>
+          <h6><%= resultUser[0].user_description %></h6>
+          <a
+          href="/user/oneUser/editUser/<%= resultUser[0].user_id %>"
+          class="text-center"
+          ><button class="buttonSMore">Editar</button></a
+        >
+          <img src="/images/user/<%= resultUser[0].user_img %>" alt="" />
+         
+        </div>
+        <div class="cardfilms col-8">
+          <h4 class="d-inline collec">Colección de películas.</h4>
+          <a href="/movies/addMovie/<%= resultUser[0].user_id %>" class="text-center"
+            ><button class="buttonSMore">
+              Añadir película a la colección
+            </button></a>
+          <% resultMovie.forEach(movie => { %>
+          <div class="eachFilm">
+            <div class="movieImg">
+              <img src="/images/movies/<%= movie.movie_img %>" alt="" />
+            </div>
+            <div class="movieText">
+              <h5><%= movie.title %> - <%= movie.release_year %></h5>
+              <p><%= movie.movie_description %></p>
+              <a href="/movies/deleteMovie/<%= movie.user_id %>/<%= movie.movie_id %>" class="text-center"
+                ><button class="buttonDelete">
+                  Eliminar de la lista
+                </button></a>
+            </div>
+          </div>
+         
+          <% }) %>
+        </div>
+      </div>
+    </div>
+    <%- include('footer') %>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

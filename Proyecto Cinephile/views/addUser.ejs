@@ -19,33 +19,40 @@
         <div class="col-12"><h1>Registrar usuario</h1></div>
      <div class="col-12 formcol">
         <div class="divform">
-            <form action="">
+          <h5><%= mensaje %></h5>
+            <form action="/user/addUser" method="post" enctype="multipart/form-data">
                 <label for="">Nombre</label>
                 <br>
-                <input type="text" placeholder="Introduce tu nombre">
+                <input type="text" placeholder="Introduce tu nombre" name="name">
                 <br><br>
                 <label for="">Apellidos</label>
                 <br>
-                <input type="text" placeholder="Introduce tus apellidos">
+                <input type="text" placeholder="Introduce tus apellidos " name="last_name">
                 <br><br>
                 <label for="">Nº de teléfono</label>
                 <br>
-                <input type="text" placeholder="Introduce el nº de teléfono">
+                <input type="text" placeholder="Introduce el nº de teléfono" name="phone_number">
                 <br><br>
                 <label for="">Descríbete en pocas palabras</label>
                 <br>
-                <textarea name="" id="" cols="60" rows="5" placeholder="Por ejemplo: ¿Cuál es tu género favorito?"></textarea>
+                <textarea name="text" id="" cols="60" rows="5" placeholder="Por ejemplo: ¿Cuál es tu género favorito?"></textarea>
                 <br><br>
                 <label for="">E-mail</label>
                 <br>
-                <input type="email" placeholder="Introduce tu e-mail">
+                <input type="email" placeholder="Introduce tu e-mail" name="email">
                 <br><br>
                 <label for="">Contraseña</label>
                 <br>
-                <input type="password" placeholder="Introduce una contraseña">
+                <input type="password" placeholder="Introduce una contraseña" name="password">
                 <br><br>
-                
-              </form>
+                <label for="">Sube tu imagen de perfil</label>
+                <br>
+                <input class="filename" type="file" name="user_img" id="">
+                <br><br>
+                <div class="text-end">
+                  <button class="enviar" type="submit">Enviar</button>
+                </div>
+                </form>
         </div>
         
      </div>

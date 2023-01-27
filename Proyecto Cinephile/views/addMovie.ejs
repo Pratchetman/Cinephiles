@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="/stylesheets/addMovie.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <%- include('navbar') %>
+    <div class="container">
+      <div class="row cardrow">
+        
+        <div class="col-3">
+            <div class="cardmini">
+              <h3><%= resultUser[0].user_name %></h2>
+              <h5><%= resultUser[0].user_last_name %></h4>
+  
+              <img src="/images/user/<%= resultUser[0].user_img %>" alt="" />
+            </div>
+        </div>
+     <div class="col-6 formcol">
+        
+        <div class="divform">
+            
+            <h3>Añadir película.</h3>
+            <form action="/movies/addMovie" method="post" enctype="multipart/form-data">
+                <input hidden type="text" name="user_id" value="<%= resultUser[0].user_id %>">
+                <label for="">Título</label>
+                <br>
+                <input type="text" placeholder="Introduce el título" name="title">
+                <br><br>
+                <label for="">Director</label>
+                <br>
+                <input type="text" placeholder="Introduce el director" name="director">
+                <br><br>
+                <label for="">Género</label>
+                <br>
+                <select name="genre" id="">
+                    <option value="">Elige el género</option>
+                    <option value="Animacion">Animación</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Policiaca">Policiaca</option>
+                </select>
+                <br><br>
+                <label for="">Año de lanzamiento</label>
+                <br>
+                <input type="number" name="release_year" min="1900" step="1" value="2000">
+                <br><br>
+                <label for="">Descripción / Sinopsis</label>
+                <br>
+                <textarea name="text" id="" cols="60" rows="5" placeholder="Puedes introducir la sinopsis o el reparto"></textarea>
+                <br><br>
+                <label for="">Sube tu imagen de perfil</label>
+                <br>
+                <input class="filename" type="file" name="user_img" id="">
+                <br><br>
+                <div class="text-end">
+                  <button class="enviar" type="submit">Enviar</button>
+                </div>
+                </form>
+        </div>
+        
+     </div>
+      </div>
+    </div>
+    <%- include('footer') %>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
