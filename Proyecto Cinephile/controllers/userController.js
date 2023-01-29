@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 
 class UserController {
   viewAllUsers = (req, res) => {
-    let sql = "SELECT * FROM user WHERE deleted = false";
+    let sql = "SELECT * FROM user WHERE deleted = false ORDER BY user_id DESC";
     connection.query(sql, (error, result) => {
       if (error) throw error;
       res.render("allUsers", { result });
@@ -79,6 +79,56 @@ class UserController {
         if (error) throw error;
         res.redirect(`/user/oneUser/${user_id}`);
 
+    })
+  }
+  
+  viewlogin = (req, res) => {
+    res.render("login", { mensaje: ""});
+    
+  }
+
+  login = (req, res) => {
+    let { email, password } = req.body;
+    let sql = `SELECT * FROM user WHERE user_email = "${email}";`;
+    connection.query(sql, (error, resultmail) =>{
+      if (error) throw error;
+      if (resultmail.length == 1) {
+        let hash = resultmail[0].user_password;
+        bcrypt.compare(password, hash, function (err, result){
+          if (err) throw err;
+          if (result) {
+            res.redirect(`/user/oneUser/${resultmail[0].user_id}`);
+          } else {
+            res.render('login', { mensaje : "Nombre de usuario o contraseña incorrectos."});
+          }
+        });
+      } else {
+        res.render('login', { mensaje : "Nombre de usuario o contraseña incorrectos."});
+      }
+    });
+  };
+
+  deleteUser = (req, res) => {
+    let user_id = req.params.user_id;
+    let sql = `SELECT * FROM user WHERE user_id = "${user_id}";`;
+    connection.query(sql, (error, result) => {
+      if (error) throw error;
+      if (result.length == 1) {
+        let password = req.body.password;
+        let hash = result[0].user_password;
+        bcrypt.compare(password, hash, function (err, resultHash){
+          if (err) throw err;
+          if (resultHash) {
+            let sql2 = `UPDATE user LEFT JOIN movie ON user.user_id = movie.user_id SET user.deleted = true , movie.deleted = true WHERE user.user_id = ${user_id};`;
+            connection.query(sql2, (error2, resultDel) =>{
+              if (error2) throw error2;
+              res.redirect("/user");
+            })
+          } else {
+            res.render('editUser', { result, mensaje: "Contraseña incorrecta."})
+          }
+        })
+      }
     })
   }
 }

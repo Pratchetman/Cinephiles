@@ -22,4 +22,13 @@ router.get('/oneUser/editUser/:user_id', userController.viewEditUser);
 //localhost:3000/user/oneUser/editUser/:user_id
 router.post('/oneUser/editUser/:user_id', multer("user"), userController.editUserTodb);
 
+//localhost:3000/user/login
+router.get('/login', userController.viewlogin);
+
+//localhost:3000/user/login
+router.post('/login', userController.login);
+
+//localhost:3000/user/deleteUser/:user_id
+router.post('/deleteUser/:user_id', userController.deleteUser);
+
 module.exports = router;

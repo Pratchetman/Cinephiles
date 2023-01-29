@@ -34,11 +34,11 @@
                 <input hidden type="text" name="user_id" value="<%= resultUser[0].user_id %>">
                 <label for="">Título</label>
                 <br>
-                <input type="text" placeholder="Introduce el título" name="title">
+                <input type="text" placeholder="Introduce el título" name="title" required maxlength="80">
                 <br><br>
                 <label for="">Director</label>
                 <br>
-                <input type="text" placeholder="Introduce el director" name="director">
+                <input type="text" placeholder="Introduce el director" name="director" maxlength="80">
                 <br><br>
                 <label for="">Género</label>
                 <br>
@@ -55,11 +55,11 @@
                 <br><br>
                 <label for="">Descripción / Sinopsis</label>
                 <br>
-                <textarea name="text" id="" cols="60" rows="5" placeholder="Puedes introducir la sinopsis o el reparto"></textarea>
+                <textarea name="text" id="" cols="60" rows="5" placeholder="Puedes introducir la sinopsis o el reparto" maxlength="1500"></textarea>
                 <br><br>
                 <label for="">Sube tu imagen de perfil</label>
                 <br>
-                <input class="filename" type="file" name="user_img" id="">
+                <input class="filename" type="file" name="img" id="">
                 <br><br>
                 <div class="text-end">
                   <button class="enviar" type="submit">Enviar</button>

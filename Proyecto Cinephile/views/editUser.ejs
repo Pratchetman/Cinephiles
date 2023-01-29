@@ -20,7 +20,7 @@
         <div class="col-3">
           <div class="cardmini">
             <h3><%= result[0].user_name %></h2>
-            <h5><%= result[0].user_last_name %></h4>
+            <h5><%= result[0].user_last_name %></h5>
 
             <img src="/images/user/<%= result[0].user_img %>" alt="" />
           </div>
@@ -28,7 +28,7 @@
 
         <div class="col-8 formcol">
           <div class="divform">
-            <h5><%= mensaje %></h5>
+            
             <form
               action="/user/oneUser/editUser/<%= result[0].user_id %>"
               method="post"
@@ -39,7 +39,7 @@
               <input
                 type="text"
                 placeholder="Introduce tu nombre"
-                name="name"
+                name="name" required required maxlength="50"
                 value="<%= result[0].user_name %>"
               />
               <br /><br />
@@ -48,7 +48,7 @@
               <input
                 type="text"
                 placeholder="Introduce tus apellidos "
-                name="last_name"
+                name="last_name" required maxlength="80"
                 value="<%= result[0].user_last_name %>"
               />
               <br /><br />
@@ -57,28 +57,37 @@
               <input
                 type="text"
                 placeholder="Introduce el nº de teléfono"
-                name="phone_number"
+                name="phone_number" required maxlength="15"
                 value="<%= result[0].phone_number %>"
               />
               <br /><br />
-              <label for="">También puedes modificar tu descripción</label>
+              <label for="">También puedes modificar tu descripción.</label>
               <br />
               <textarea
                 name="text"
                 id=""
                 cols="60"
-                rows="5"
+                rows="5" required maxlength="200"
                 placeholder="<%= result[0].user_description %>"
               ></textarea>
               <br /><br />
-              <label for="">Actualiza tu imagen de perfil</label>
+              <label for="">Actualiza tu imagen de perfil.</label>
               <br />
-              <input class="filename" type="file" name="user_img" id="" />
+              <input class="filename" type="file" name="img" id="" />
               <br /><br />
               <div class="text-end">
                 <button class="enviar" type="submit">Actualizar</button>
               </div>
             </form>
+            <hr>
+            <p>O también puedes eliminar este usuario.</p>
+            <form action="/user/deleteUser/<%= result[0].user_id %>" method="post">
+             
+              <p>Introduce la contraseña del usuario y pulsa el boton eliminar</p><input type="password" name="password"  placeholder="Contraseña" id=""><br><br>
+              <h5 class="error"><%= mensaje %></h5>
+              <button type="submit" class="enviarDel">Eliminar</button></a>
+            </form>
+           
           </div>
         </div>
       </div>

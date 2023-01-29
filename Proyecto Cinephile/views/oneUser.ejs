@@ -16,26 +16,29 @@
     <%- include('navbar') %>
     <div class="container">
       <div class="row cardrow">
-        <div class="col-12"><h1><%= resultUser[0].user_name %></h1></div>
+        <div class="col-12"><h1><%= resultUser[0].user_name %> <%= resultUser[0].user_last_name %></h1></div>
 
         <div class="card col-4">
           <h4><%= resultUser[0].user_name %></h4>
           <h6><%= resultUser[0].user_last_name %></h6>
+          <h6>Tel.<%= resultUser[0].phone_number %></h6>
           <h6><%= resultUser[0].user_description %></h6>
           <a
           href="/user/oneUser/editUser/<%= resultUser[0].user_id %>"
           class="text-center"
-          ><button class="buttonSMore">Editar</button></a
+          ><button class="buttonEdit">Editar</button></a
         >
           <img src="/images/user/<%= resultUser[0].user_img %>" alt="" />
          
         </div>
         <div class="cardfilms col-8">
-          <h4 class="d-inline collec">Colección de películas.</h4>
-          <a href="/movies/addMovie/<%= resultUser[0].user_id %>" class="text-center"
+          <div class="menucol">
+            <h3 class="d-inline collec">Colección de películas.</h3>
+          <a href="/movies/addMovie/<%= resultUser[0].user_id %>" class="text-end"
             ><button class="buttonSMore">
               Añadir película a la colección
             </button></a>
+          </div>
           <% resultMovie.forEach(movie => { %>
           <div class="eachFilm">
             <div class="movieImg">
@@ -43,11 +46,18 @@
             </div>
             <div class="movieText">
               <h5><%= movie.title %> - <%= movie.release_year %></h5>
-              <p><%= movie.movie_description %></p>
-              <a href="/movies/deleteMovie/<%= movie.user_id %>/<%= movie.movie_id %>" class="text-center"
-                ><button class="buttonDelete">
-                  Eliminar de la lista
-                </button></a>
+              <p  class="description"><%= movie.movie_description %></p>
+              <div>
+                <a href="/movies/oneMovie/<%= movie.movie_id %>" class="text-center"
+                  ><button class="buttonEdit">
+                   Ampliar
+                  </button></a>
+                <a href="/movies/deleteMovie/<%= movie.user_id %>/<%= movie.movie_id %>" class="text-center"
+                  ><button class="buttonDelete">
+                    Eliminar de la lista
+                  </button></a>
+              </div>
+             
             </div>
           </div>
          

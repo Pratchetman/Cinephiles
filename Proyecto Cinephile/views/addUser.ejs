@@ -23,31 +23,31 @@
             <form action="/user/addUser" method="post" enctype="multipart/form-data">
                 <label for="">Nombre</label>
                 <br>
-                <input type="text" placeholder="Introduce tu nombre" name="name">
+                <input type="text" placeholder="Introduce tu nombre" name="name" maxlength="50" required>
                 <br><br>
                 <label for="">Apellidos</label>
                 <br>
-                <input type="text" placeholder="Introduce tus apellidos " name="last_name">
+                <input type="text" placeholder="Introduce tus apellidos " name="last_name" maxlength="80" required >
                 <br><br>
                 <label for="">Nº de teléfono</label>
                 <br>
-                <input type="text" placeholder="Introduce el nº de teléfono" name="phone_number">
+                <input type="text" placeholder="Introduce el nº de teléfono" name="phone_number" maxlength="15">
                 <br><br>
                 <label for="">Descríbete en pocas palabras</label>
                 <br>
-                <textarea name="text" id="" cols="60" rows="5" placeholder="Por ejemplo: ¿Cuál es tu género favorito?"></textarea>
+                <textarea name="text" id="" cols="60" rows="5" maxlength="200" placeholder="Por ejemplo: ¿Cuál es tu género favorito?"></textarea>
                 <br><br>
                 <label for="">E-mail</label>
                 <br>
-                <input type="email" placeholder="Introduce tu e-mail" name="email">
+                <input type="email" placeholder="Introduce tu e-mail" name="email" required>
                 <br><br>
                 <label for="">Contraseña</label>
                 <br>
-                <input type="password" placeholder="Introduce una contraseña" name="password">
+                <input type="password" placeholder="Introduce una contraseña" name="password" required>
                 <br><br>
                 <label for="">Sube tu imagen de perfil</label>
                 <br>
-                <input class="filename" type="file" name="user_img" id="">
+                <input class="filename" type="file" name="img" id="">
                 <br><br>
                 <div class="text-end">
                   <button class="enviar" type="submit">Enviar</button>

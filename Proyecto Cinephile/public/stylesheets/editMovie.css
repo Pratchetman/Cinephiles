@@ -2,14 +2,19 @@ body{
     background: linear-gradient( rgb(255, 170, 0) 5%, white 50%);
 }
 .cardrow {
-    padding: 30px 0px;
+    padding: 10px 0px 30px 0px;
+    justify-content: space-between;
 }
 .title {
-    padding-bottom: 30px;
+    padding-top: 30px;
 }
 h3{
     margin-left: 20px;
     margin-bottom: 3px !important;
+}
+.mensaje{
+    text-align: center;
+    color: red;
 }
 h5{
     margin-left: 20px;
@@ -19,7 +24,7 @@ h5{
     background-color: rgb(255, 255, 255);
     padding-top: 20px;
     height: 530px;
-    width: 250px;
+    width: 90%;
     border: 1px solid rgb(255, 170, 0) !important;
     box-shadow: 3px 3px 8px rgb(255, 170, 0);
     border-radius: 10px !important;
@@ -27,18 +32,30 @@ h5{
     overflow: hidden;
 
 }
+/* .cardminimg{
+    display: flex;
+    justify-content: center;
+    /* height: 300px;
+    width: 300px; */
 
 .cardmini img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center;
+    
+    
 }
-
+input{
+    width: 100%;
+}
+.formcol{
+    justify-content: end;
+}
 .divform{
-    width: 600px;
+    width: 100%;
     color: rgb(0, 0, 0);
-    padding: 20px;
+    padding: 2vw 3vw;
     border: 1px solid rgb(255, 170, 0) !important;
     border-radius: 10px !important;
     box-shadow: 3px 3px 8px rgb(255, 170, 0);
@@ -46,36 +63,14 @@ h5{
 }
 .enviar{
     border: 2px solid rgb(255, 170, 0);
-    color: rgb(255, 255, 255);
-    background-color: rgb(255, 170, 0);
+    color: black;
+    background-color: white;
     border-radius: 14px;
     padding: 2px 18px;
     margin-right: 30px;
     font-weight: 600;
 }
 .enviar:hover{
-    background-color:  rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    
-}
-
-.enviarDel{
-    border: 2px solid rgb(189, 0, 0);
-    color: rgb(255, 255, 255);
-    background-color: rgb(189, 0, 0);
-    border-radius: 14px;
-    padding: 2px 18px;
-    margin-right: 30px;
-    font-weight: 600;
-}
-.enviarDel:hover{
-    background-color: rgb(255, 255, 255);
-    color:  rgb(189, 0, 0);
-    border: 2px solid  rgb(189, 0, 0);
-}
-.error{
-    color: rgb(189, 0, 0);
-}
-hr{
-    border: 1px solid rgb(255, 170, 0) !important;
+    background-color:  rgb(255, 170, 0);
+    color: white;
 }
