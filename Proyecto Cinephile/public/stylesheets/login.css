@@ -11,17 +11,15 @@ h5{
     color: red !important;
 }
 .formcol{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
   
 }
-/* form{
-    margin: auto;
 
-} */
 .divform{
-    width: 600px;
+    width: 30vw;
     color: rgb(0, 0, 0);
     padding: 20px;
     border: 1px solid rgb(255, 170, 0) !important;
@@ -29,9 +27,10 @@ h5{
     box-shadow: 3px 3px 8px rgb(255, 170, 0);
     margin-bottom: 30px;
     position: relative;
-    height: 50%;
     
 }
+
+
 input{
     width: 400px;
 }
@@ -56,3 +55,19 @@ label{
     justify-content: center;
 }
 
+@media (max-width: 585px){
+    .divform{
+        width: 90vw;
+    }
+    input{
+        width: 90% !important;
+    }
+    .formrow{
+        height: 50vh;
+    }
+    .cardrow{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

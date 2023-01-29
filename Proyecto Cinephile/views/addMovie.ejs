@@ -25,7 +25,7 @@
               <img src="/images/user/<%= resultUser[0].user_img %>" alt="" />
             </div>
         </div>
-     <div class="col-6 formcol">
+     <div class="col-12 col-sm-6 formcol">
         
         <div class="divform">
             
@@ -44,9 +44,16 @@
                 <br>
                 <select name="genre" id="">
                     <option value="">Elige el género</option>
-                    <option value="Animacion">Animación</option>
+                    <option value="Acción">Acción</option>
+                    <option value="Aventuras">Aventuras</option>
+                    <option value="Ciencia ficción">Ciencia ficción</option>
+                    <option value="Comedia">Comedia</option>
+                    <option value="Documental">Documental</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Fantasía">Fantasía</option>
+                    <option value="Musical">Musical</option>
+                    <option value="Suspense">Suspense</option>
                     <option value="Terror">Terror</option>
-                    <option value="Policiaca">Policiaca</option>
                 </select>
                 <br><br>
                 <label for="">Año de lanzamiento</label>
@@ -55,7 +62,7 @@
                 <br><br>
                 <label for="">Descripción / Sinopsis</label>
                 <br>
-                <textarea name="text" id="" cols="60" rows="5" placeholder="Puedes introducir la sinopsis o el reparto" maxlength="1500"></textarea>
+                <textarea class="resize" name="text" id="" cols="40" rows="5" placeholder="Puedes introducir la sinopsis o el reparto" maxlength="1500"></textarea>
                 <br><br>
                 <label for="">Sube tu imagen de perfil</label>
                 <br>

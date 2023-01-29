@@ -5,12 +5,62 @@ body{
     padding: 20px 0px 5px 0px;
     gap: 10px;
 }
+.carro{
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+.carousel-item {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
 .card {
-   color:   rgb(255, 255, 255);
+   color:   rgb(0, 0, 0);
    background: none !important;
    margin: 30px 0px;
    border: 1px solid  rgb(255, 170, 0) !important;
    box-shadow: 3px 3px 8px rgb(255, 170, 0);
+   padding: 0px !important;
+   text-align: center;
+   font-size: 16px !important;
+   position: relative;
+   overflow: hidden;
+}
+.card:hover{
+    border: 3px solid rgb(255, 170, 0) !important;
+    cursor: pointer;
+  
+}
+
+.smCardrow{
+    justify-content: space-evenly;
+}
+.card>a{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.cardImg{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.headFilms{
+    position: absolute;
+    
+}
+.headFilms>p{
+    margin-left: 5px !important;
+    font-weight: 600;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    margin: 0px;
 }
 .rowmain{
     padding: 30px 0px;
@@ -22,35 +72,101 @@ body{
     padding: 0px !important;
     justify-content: start;
 }
-
-.colsmall{
-    /* justify-content: flex-end; */
-
+.godfather{
+    height: 111%;
+    width: 111%;
+    object-fit: cover;
+    object-position: center;
 }
+
 .bigCard{
     color: rgb(255, 255, 255);
-    
-    padding: 20px;
-    height: 400px;
+    position: relative;
+    /* padding: 20px; */
+    height: 30vw;
     border: 1px solid rgb(255, 170, 0) !important;
     border-radius: 10px !important;
     text-align: end;
-    background: url(/images/cine-clasico.jpeg);
+    /* background: url(/images/cine-clasico.jpeg); */
     background-size: cover;
     background-position: center;
     box-shadow: 3px 3px 8px rgb(255, 170, 0);
+    overflow: hidden;
 }
 .bigCard h1{
     text-shadow: 1px 1px black;
 }
+.bigCard p{
+    text-shadow: 1px 1px black;
+}
+.bigTitle{
+    right: 10px;
+    position: absolute;
+    z-index: 1;
+}
 .smallCard{
-    
+    padding: 0px !important;
     background-color: rgb(255, 255, 255);
     padding: 20px;
-    height: 400px;
+    height: 30vw;
     width: 95%;
     border: 1px solid rgb(255, 170, 0) !important;
     box-shadow: 3px 3px 8px rgb(255, 170, 0);
     border-radius: 10px !important;
     margin-left: 27px;
+    overflow: hidden;
 }
+.smallCard>.headFilms{
+    margin-left: 10px;
+}
+.smallCard>h5{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.lastUser{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-fit: center;
+}
+hr{
+    color:  rgb(255, 170, 0) !important;
+    
+}
+@media (max-width: 585px) {
+    .smallCard{
+        height: 50vh;
+    }
+    .bigCard{
+        height: 30vh;   
+    }
+    .godfather{
+        height: 121%;
+        width: 121%;
+    }
+    .colsmall{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin: 0px !important;
+    }
+    .smallCard{
+        margin: auto;
+        margin-top: 20px;
+        
+    }
+    .cardrow{
+        gap: none;
+        padding: 0px;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .card{
+        width: 100%;
+        text-align: center;
+        
+    }
+  }

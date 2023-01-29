@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="/stylesheets/allUsers.css" />
+    <link rel="stylesheet" href="/stylesheets/searchMovie.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,27 +15,34 @@
   <body>
     <%- include('navbar') %>
     <div class="container">
+ 
       <div class="row cardrow">
-        <div class="col-12"><h1>Listado de usuarios</h1></div>
-        <% result.forEach (user => { %>
-        <div class="card col-12 col-sm-4">
-          
-          <div class="headCard">
-            <div class="headText">
-              <h4><%= user.user_name %></h4>
-              <h6><%= user.user_last_name %></h6>
-              <h6><%= user.user_description %></h6>
-            </div>
-            <a href="/user/oneUser/<%= user.user_id %>" class="text-end"
-              ><button class="buttonSMore">Ver mas</button></a
-            >
-          </div>
-
-          <img src="/images/user/<%= user.user_img %>" alt="" />
-        
+        <div class="col-12"><h2>Resultado de la busqueda.</h2>
         </div>
+    </div>
+    <div>
+        <h2><%= mensaje %></h2>
+    </div>
+      <div class="row smCardrow">
+        <% resultMovie.forEach (movie => { %>
+        
+          <div class="card col-12 col-sm-3">
+            
+             <div class="headFilms">
+              <p><%= movie.title %></p>
+              <p class="text-start"><%= movie.release_year %></p>
+            </div>
+            
+           
+            <a href="/movies/oneMovie/<%= movie.movie_id %>">
+            <img class="cardImg" src="/images/movies/<%= movie.movie_img %>" alt="" />
+            </a>
+          </div>
+       
+        
         <% }) %>
-      </div>
+      </div>        
+    
     </div>
     <%- include('footer') %>
     <script

@@ -22,7 +22,7 @@
         <div class="col-12">
         <h5 class="mensaje"><%= mensaje %></h5>
         </div class="col-12">
-        <div class="col-4">
+        <div class="col-12 col-sm-4">
           <div class="cardmini">
             <h3><%= result[0].title %></h2>
             <h5><%= result[0].release_year %></h4>
@@ -31,7 +31,7 @@
           </div>
         </div>
 
-        <div class="col-8 formcol">
+        <div class="col-12 col-sm-8 formcol">
           <div class="divform">
             
             <form
@@ -65,9 +65,17 @@
               <br>
               <select name="genre" id="">
                 <option value="<%= result[0].genre %>"><%= result[0].genre %></option>
-                <option value="Animacion">Animación</option>
-                <option value="Terror">Terror</option>
-                <option value="Policiaca">Policiaca</option>
+                <option value="">Elige el género</option>
+                    <option value="Acción">Acción</option>
+                    <option value="Aventuras">Aventuras</option>
+                    <option value="Ciencia ficción">Ciencia ficción</option>
+                    <option value="Comedia">Comedia</option>
+                    <option value="Documental">Documental</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Fantasía">Fantasía</option>
+                    <option value="Musical">Musical</option>
+                    <option value="Suspense">Suspense</option>
+                    <option value="Terror">Terror</option>
                 </select>
                 <br><br>
               <label for="">También puedes modificar la descripción</label>
@@ -75,7 +83,7 @@
               <textarea
                 name="text"
                 id=""
-                cols="90"
+                cols="44"
                 rows="5"
                 placeholder="<%= result[0].movie_description %>"
                 maxlength="1500"

@@ -66,3 +66,17 @@ body{
     background-color:  rgb(255, 170, 0);
     color: white;
 }
+.resize{
+    resize: none;
+}
+@media (max-width: 858px){
+    .cardmini{
+        display: none;
+    }
+    .divform{
+        width: 97%;
+    }
+    input{
+        width: 100%;
+    }
+}

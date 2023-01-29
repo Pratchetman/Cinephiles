@@ -26,6 +26,9 @@ form{
     box-shadow: 3px 3px 8px rgb(255, 170, 0);
     margin-bottom: 30px;
 }
+.resize{
+    resize: none;
+}
 input{
     width: 400px;
 }
@@ -44,4 +47,13 @@ label{
 .enviar:hover{
     background-color:  rgb(255, 170, 0);
     color: white;
+}
+@media (max-width: 585px){
+    .divform{
+        width: 90vw;
+       
+    }
+    input {
+        width: 100%;
+    }
 }

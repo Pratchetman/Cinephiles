@@ -74,7 +74,29 @@ class MovieController {
     })
   }
 
+  viewAllMovies = (req, res) => {
+    let sql = `SELECT * FROM movie WHERE deleted = false order by title asc`;
+    connection.query(sql, (error, resultMovie) =>{
+      if(error) throw error;
+      res.render('allMovies', { resultMovie });
+    })
+  }
 
+  searchMovies = (req, res) => {
+    let movie = req.body.movie;
+    let sql = `SELECT * FROM movie WHERE title LIKE "%${movie}%" AND deleted = false;`;
+    connection.query(sql, (error, resultMovie) => {
+      if (error) throw error;
+      if (resultMovie.length == 0){
+        res.render('searchMovie', { resultMovie, mensaje: "Ninguna película encontrada, inténtalo de nuevo."})
+      }
+      else{
+        res.render('searchMovie', { resultMovie, mensaje:"" });
+      }
+      
+
+    });
+  }
 
 }
 module.exports = new MovieController();
