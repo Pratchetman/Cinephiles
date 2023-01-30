@@ -5,7 +5,9 @@ body{
     padding: 2vw 1vw 2vw 1vw;
     gap: 10px;
 }
-
+.h1sh{
+    text-shadow: 1px 1px 1px rgb(0, 0, 0) !important;
+}
 .card {
    color:   rgb(0, 0, 0);
    background: none !important;
@@ -13,11 +15,13 @@ body{
    border: 1px solid  rgb(255, 170, 0) !important;
    box-shadow: 3px 3px 8px rgb(255, 170, 0);
    padding: 0px !important;
-   text-align: center;
+   /* text-align: center; */
    font-size: 16px !important;
    position: relative;
    overflow: hidden;
-   
+}
+.card:hover {
+    box-shadow: 3px 3px 8px rgb(0, 0, 0);
 }
 .container {
     min-height: 35vw;
@@ -25,7 +29,7 @@ body{
 
 .smCardrow{
     justify-content: space-evenly;
-    gap: 20px;
+    gap: 18px;
     padding: 2vw;
     
 }
@@ -40,10 +44,11 @@ body{
     width: 100%;
     object-fit: cover;
     object-position: center;
+    
 }
 .headFilms{
     position: absolute;
-    
+    align-items: flex-start !important;
 }
 .headFilms>p{
     margin-left: 5px !important;
@@ -53,26 +58,12 @@ body{
     margin: 0px;
 }
 
-
-
-
-.smallCard{
-    padding: 0px !important;
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
-    height: 30vw;
-    width: 95%;
-    border: 1px solid rgb(255, 170, 0) !important;
-    box-shadow: 3px 3px 8px rgb(255, 170, 0);
-    border-radius: 10px !important;
-    margin-left: 27px;
-    overflow: hidden;
+@media (max-width: 585px){
+    .container {
+        min-height: 65vh;
+    }
+    .card {
+        width: 70% !important;
+        margin: auto !important;
+    }
 }
-.smallCard>.headFilms{
-    margin-left: 10px;
-}
-.smallCard>h5{
-    margin-left: 10px;
-    margin-top: 10px;
-}
-

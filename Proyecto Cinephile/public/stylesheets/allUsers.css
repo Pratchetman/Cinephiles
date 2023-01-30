@@ -5,8 +5,9 @@ body{
     justify-content: space-around;
     padding: 20px 0px;
 }
-.cardrow>h1{
+.h1sh{
     margin-bottom: 30px !important;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0) !important;
 }
 .card {
     width: 20vw !important;
@@ -57,7 +58,7 @@ body{
     background-color: rgb(255, 170, 0);
     border: 2px solid white;
 }
-@media (max-width: 585px) {
+@media (max-width: 769px) {
     .cardrow{
         flex-direction: column;
         justify-content: center;

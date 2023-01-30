@@ -3,6 +3,10 @@ body{
 }
 .cardrow {
     padding: 30px 0px;
+    justify-content: space-evenly !important;
+}
+.h1sh{
+    text-shadow: 1px 1px 1px rgb(0, 0, 0) !important;
 }
 .title {
     padding-bottom: 30px;
@@ -10,22 +14,26 @@ body{
 h3{
     margin-left: 20px;
     margin-bottom: 3px !important;
+    color: black !important;
 }
 h5{
     margin-left: 20px;
     margin-bottom: 20px !important; 
+    color: black !important;
 }
 .cardmini{
     background-color: rgb(255, 255, 255);
     padding-top: 20px;
-    height: 530px;
-    width: 250px;
+    /* height: 50vh; */
+    /* width: 30vw; */
     border: 1px solid rgb(255, 170, 0) !important;
     box-shadow: 3px 3px 8px rgb(255, 170, 0);
     border-radius: 10px !important;
     margin-left: 27px;
     overflow: hidden;
-
+}
+.cardmini:hover{
+    box-shadow: 3px 3px 8px rgb(0, 0, 0);
 }
 
 .cardmini img{
@@ -36,7 +44,7 @@ h5{
 }
 
 .divform{
-    width: 600px;
+    max-width: 600px;
     color: rgb(0, 0, 0);
     padding: 20px;
     border: 1px solid rgb(255, 170, 0) !important;
@@ -78,4 +86,17 @@ h5{
 }
 hr{
     border: 1px solid rgb(255, 170, 0) !important;
+}
+
+@media (max-width: 585px){
+    .cardmini{
+        margin: auto !important;
+        margin-bottom: 20px !important;
+        width: 90% !important;
+    }
+    .divform {
+        width: 98% !important;
+        margin: auto;
+    }
+   
 }

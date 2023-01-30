@@ -6,6 +6,9 @@ body{
     gap: 10px;
     
 }
+.h1sh{
+    text-shadow: 1px 1px 1px rgb(0, 0, 0) !important;
+}
 h5{
     color: red !important;
 }
@@ -48,7 +51,12 @@ label{
     background-color:  rgb(255, 170, 0);
     color: white;
 }
-@media (max-width: 585px){
+.span1{
+    font-size: 12px !important;
+    color: gray !important;
+    font-weight: 100 !important;
+}
+@media (max-width: 769px){
     .divform{
         width: 90vw;
        

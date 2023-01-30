@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Cinephiles - Editar Usuario</title>
     <link rel="stylesheet" href="/stylesheets/editUser.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,17 +17,20 @@
     <%- include('navbar') %>
     <div class="container">
       <div class="row cardrow">
-        <div class="col-12 title"><h1>Editar usuario</h1></div>
+        <div class="col-12 title"><h1 class="h1sh">Editar usuario</h1></div>
         <div class="col-12 col-sm-3">
-          <div class="cardmini">
-            <h3><%= result[0].user_name %></h2>
-            <h5><%= result[0].user_last_name %></h5>
-
-            <img src="/images/user/<%= result[0].user_img %>" alt="" />
-          </div>
+          <a href="/user/oneUser/<%= result[0].user_id %>">
+            <div class="cardmini">
+              <h3><%= result[0].user_name %></h2>
+              <h5><%= result[0].user_last_name %></h5>
+  
+              <img src="/images/user/<%= result[0].user_img %>" alt="" />
+            </div>
+          </a>
+          
         </div>
 
-        <div class="col-12 col-sm-8 formcol">
+        <div class="col-12 col-sm-9">
           <div class="divform">
             
             <form
@@ -66,7 +70,7 @@
               <textarea
                 name="text"
                 id=""
-                cols="60"
+                cols="40"
                 rows="5" maxlength="200"
                 placeholder="<%= result[0].user_description %>"
               ></textarea>

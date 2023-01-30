@@ -5,10 +5,15 @@ body{
     padding: 10px 0px 30px 0px;
     justify-content: space-between;
 }
+.h1sh{
+    text-shadow: 1px 1px 1px rgb(0, 0, 0) !important;
+}
 .title {
     padding-top: 30px;
 }
+
 h3{
+    color: black !important;
     margin-left: 20px;
     margin-bottom: 3px !important;
 }
@@ -17,6 +22,7 @@ h3{
     color: red;
 }
 h5{
+    color: black !important;
     margin-left: 20px;
     margin-bottom: 20px !important; 
 }
@@ -30,7 +36,9 @@ h5{
     border-radius: 10px !important;
     margin-left: 27px;
     overflow: hidden;
-
+}
+.cardmini:hover{
+    box-shadow: 3px 3px 8px rgb(0, 0, 0);
 }
 
 .cardmini img{
@@ -38,10 +46,9 @@ h5{
     width: 100%;
     object-fit: cover;
     object-position: center;
-    
-    
 }
-input{
+
+.divform input{
     width: 100%;
 }
 .formcol{
@@ -65,19 +72,29 @@ input{
     margin-right: 30px;
     font-weight: 600;
 }
+.resize{
+    resize: none;
+}
 .enviar:hover{
     background-color:  rgb(255, 170, 0);
     color: white;
 }
+.span1{
+    font-size: 12px !important;
+    color: gray !important;
+    font-weight: 100 !important;
+}
 
 @media (max-width: 585px) {
     .cardmini img{
-        width: auto !important;
-        height: 300px !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+        object-position: center;
     }
     .cardmini{
         margin: auto;
-        width: 50vw !important;
+        width: 65% !important;
         text-align: center;
         height: auto !important;
         margin-bottom: 20px;
@@ -87,6 +104,6 @@ input{
         display: none;
     }
     h3{
-        margin: 0px !important;
+        margin: 10px !important;
     }
 }

@@ -4,9 +4,11 @@ body{
 .cardrow {
     padding: 20px 0px 5px 0px;
     gap: 10px;
-    
-    
 }
+.h1sh{
+    text-shadow: 1px 1px 1px rgb(0, 0, 0) !important;
+}
+
 h5{
     color: red !important;
 }
@@ -19,7 +21,7 @@ h5{
 }
 
 .divform{
-    width: 30vw;
+    width: 35vw;
     color: rgb(0, 0, 0);
     padding: 20px;
     border: 1px solid rgb(255, 170, 0) !important;
@@ -27,12 +29,11 @@ h5{
     box-shadow: 3px 3px 8px rgb(255, 170, 0);
     margin-bottom: 30px;
     position: relative;
-    
+    margin: auto;
 }
 
-
 input{
-    width: 400px;
+    width: 100%;
 }
 label{
     font-weight: 600;
@@ -55,12 +56,14 @@ label{
     justify-content: center;
 }
 
-@media (max-width: 585px){
+@media (max-width: 769px){
     .divform{
-        width: 90vw;
+        width: 80vw;
+        margin: auto;
     }
     input{
         width: 90% !important;
+        margin: 5px !important;
     }
     .formrow{
         height: 50vh;
@@ -70,4 +73,5 @@ label{
         align-items: center;
         justify-content: center;
     }
+  
 }

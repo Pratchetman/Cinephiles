@@ -7,18 +7,30 @@
     top: 0px;
     z-index: 3;
 }
-@media (max-width: 450px) {
+@media (max-width: 1000px) {
     .mainnav{
         display: none;
     }
 }
 .buscador{
     margin-top: 2px !important;
+    display: flex;
+
 }
 .logo{
+    position: absolute;
     margin: 0px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     color: black;
+    top: -10px;
+    left:  0px;
+    width: 15vw;
+}
+.traslogo{
+    /* position: relative; */
+    min-width: 11vw;
+    /* height: 20px; */
+    background-color: rgb(255, 170, 0);
 }
 .navrow{
     padding-top: 1vh;
@@ -31,11 +43,14 @@ a {
 .enlaces{
     display: flex;
     align-items: center;
+    justify-content: start;
     gap: 30px;
 }
 .enlaces h4:hover{
-    text-shadow: 1px 1px 1px rgb(175, 117, 0) !important;
-
+   color: black;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0) !important;
+   
+    
 }
 
 footer{
@@ -61,6 +76,12 @@ footer>.row{
     background-color:  rgb(255, 170, 0);
     color: white;
 }
+.mainnav input{
+    border-radius: 14px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 0px 10px;
+    margin-right: 10px;
+}
 .navbutton{
     text-align: end;
 }
@@ -75,10 +96,16 @@ footer>.row{
 
 .navbar{
     background-color: rgb(255, 170, 0) !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logonav{
+    width: 110% !important;
 }
 .navbar-toggler{
+    width: 27%;
     
-    margin-bottom: 10px;
 }
 .navbar-collapse{
     background-color: rgb(255, 170, 0) !important;
@@ -96,8 +123,10 @@ span{
     font-size: 26px;
     color: white !important;
 }
-@media (min-width: 450px){
+@media (min-width: 1000px){
     nav{
         display: none !important;
     }
+  
+
 }

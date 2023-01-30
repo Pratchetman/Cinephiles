@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Cinephiles - Login</title>
     <link rel="stylesheet" href="/stylesheets/login.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,9 +17,9 @@
     <%- include('navbar') %>
     <div class="container">
       <div class="row cardrow">
-        <div class="col-12"><h1>Iniciar sesión</h1></div>
+        <div class="col-12"><h1 class="h1sh">Iniciar sesión</h1></div>
         <div class="row formrow">
-            <div class="col-12 col-sm-6 formcol">
+            <div class="col-12 formcol">
                 <div class="divform">
                   <h5><%= mensaje %></h5>
                     <form action="/user/login" method="post">

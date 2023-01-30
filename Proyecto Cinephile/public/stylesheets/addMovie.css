@@ -5,6 +5,9 @@ body{
     padding: 30px 0px;
     justify-content: center;
 }
+.h1sh{
+    text-shadow: 1px 1px 1px rgb(0, 0, 0) !important;
+}
 .title {
     padding-bottom: 30px;
 }
@@ -28,11 +31,6 @@ body{
     overflow: hidden;
 
 }
-/* .cardminimg{
-    display: flex;
-    justify-content: center;
-    /* height: 300px;
-    width: 300px; */
 
 .cardmini img{
     height: 100%;
@@ -68,6 +66,11 @@ body{
 }
 .resize{
     resize: none;
+}
+.span1{
+    font-size: 12px !important;
+    color: gray !important;
+    font-weight: 100 !important;
 }
 @media (max-width: 858px){
     .cardmini{

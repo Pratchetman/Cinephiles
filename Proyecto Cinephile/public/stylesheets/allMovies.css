@@ -5,7 +5,9 @@ body{
     padding: 2vw 0vw 2vw 0vw;
     gap: 10px;
 }
-
+.h1sh{
+    text-shadow: 1px 1px 1px rgb(0, 0, 0) !important;
+}
 .card {
    color:   rgb(0, 0, 0);
    background: none !important;
@@ -19,7 +21,7 @@ body{
    overflow: hidden;
 }
 .card:hover{
-    border: 3px solid rgb(255, 170, 0) !important;
+    box-shadow: 3px 3px 8px rgb(0, 0, 0);
     cursor: pointer;
   
 }
@@ -51,9 +53,6 @@ body{
     text-shadow: 1px 1px 1px black;
     margin: 0px;
 }
-
-
-
 
 .smallCard{
     padding: 0px !important;

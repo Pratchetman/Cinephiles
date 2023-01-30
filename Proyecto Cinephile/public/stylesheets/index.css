@@ -31,7 +31,7 @@ body{
    overflow: hidden;
 }
 .card:hover{
-    border: 3px solid rgb(255, 170, 0) !important;
+    box-shadow: 3px 3px 8px rgb(0, 0, 0);
     cursor: pointer;
   
 }
@@ -53,10 +53,11 @@ body{
 }
 .headFilms{
     position: absolute;
+    text-align: start;
     
 }
 .headFilms>p{
-    margin-left: 5px !important;
+    margin-left: 10px !important;
     font-weight: 600;
     color: white;
     text-shadow: 1px 1px 1px black;
@@ -116,6 +117,9 @@ body{
     margin-left: 27px;
     overflow: hidden;
 }
+.smallCard:hover{
+    box-shadow: 3px 3px 8px rgb(0, 0, 0);
+}
 .smallCard>.headFilms{
     margin-left: 10px;
 }
@@ -134,16 +138,16 @@ hr{
     color:  rgb(255, 170, 0) !important;
     
 }
-@media (max-width: 585px) {
+@media (max-width: 769px) {
     .smallCard{
         height: 50vh;
     }
     .bigCard{
-        height: 30vh;   
+        height: 35vh;   
     }
     .godfather{
-        height: 121%;
-        width: 121%;
+        height: 151%;
+        width: 151%;
     }
     .colsmall{
         display: flex;
