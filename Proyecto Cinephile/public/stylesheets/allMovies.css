@@ -52,27 +52,11 @@ body{
     color: white;
     text-shadow: 1px 1px 1px black;
     margin: 0px;
+    text-align: left !important;
 }
 
-.smallCard{
-    padding: 0px !important;
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
-    height: 30vw;
-    width: 95%;
-    border: 1px solid rgb(255, 170, 0) !important;
-    box-shadow: 3px 3px 8px rgb(255, 170, 0);
-    border-radius: 10px !important;
-    margin-left: 27px;
-    overflow: hidden;
-}
-.smallCard>.headFilms{
-    margin-left: 10px;
-}
-.smallCard>h5{
-    margin-left: 10px;
-    margin-top: 10px;
-}
+
+
 
 @media (max-width: 585px){
     .card{

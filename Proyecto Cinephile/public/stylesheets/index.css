@@ -173,4 +173,10 @@ hr{
         text-align: center;
         
     }
+    .carousel-item img{
+        width: 390px !important;
+        height: 340px !important;
+        object-fit: cover;
+        object-position: center;
+    }
   }

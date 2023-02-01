@@ -24,8 +24,8 @@ h5{
 .cardmini{
     background-color: rgb(255, 255, 255);
     padding-top: 20px;
-    /* height: 50vh; */
-    /* width: 30vw; */
+    height: 50vh;
+    width: 90% !important;
     border: 1px solid rgb(255, 170, 0) !important;
     box-shadow: 3px 3px 8px rgb(255, 170, 0);
     border-radius: 10px !important;

@@ -89,7 +89,7 @@ class UserController {
 
   login = (req, res) => {
     let { email, password } = req.body;
-    let sql = `SELECT * FROM user WHERE user_email = "${email}";`;
+    let sql = `SELECT * FROM user WHERE user_email = "${email}" AND deleted = false;`;
     connection.query(sql, (error, resultmail) =>{
       if (error) throw error;
       if (resultmail.length == 1) {

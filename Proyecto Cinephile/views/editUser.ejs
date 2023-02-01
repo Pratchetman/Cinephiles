@@ -43,7 +43,7 @@
               <input
                 type="text"
                 placeholder="Introduce tu nombre"
-                name="name" required maxlength="50"
+                name="name" required maxlength="40"
                 value="<%= result[0].user_name %>"
               />
               <br /><br />
@@ -52,7 +52,7 @@
               <input
                 type="text"
                 placeholder="Introduce tus apellidos "
-                name="last_name" required maxlength="80"
+                name="last_name" required maxlength="50"
                 value="<%= result[0].user_last_name %>"
               />
               <br /><br />
@@ -71,7 +71,7 @@
                 name="text"
                 id=""
                 cols="40"
-                rows="5" maxlength="200"
+                rows="3" maxlength="70"
                 placeholder="<%= result[0].user_description %>"
               ></textarea>
               <br /><br />
